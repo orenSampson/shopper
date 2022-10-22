@@ -134,7 +134,5 @@ exports.getDataTable = async (req, res, next) => {
     return someDataArr;
   });
 
-  console.log("dataArr :>> ", dataArr);
-
   return res.status(200).json(dataArr);
 };
