@@ -95,7 +95,7 @@ exports.getDataTable = async (req, res, next) => {
         return a.date > b.date ? a : b;
       });
 
-      dataByCategory = shopDataAggregatedByCategory[category];
+      const dataByCategory = shopDataAggregatedByCategory[category];
 
       dataByCategory["product_views_change"] = Math.round(
         ((maxDate["product_views"] - minDate["product_views"]) /
@@ -126,7 +126,7 @@ exports.getDataTable = async (req, res, next) => {
   }
 
   dataArr = dataArr.map((someDataArr) => {
-    someDataArr.cvr = Math.ceil(
+    someDataArr.cvr = Math.round(
       (someDataArr["units_sold"] / someDataArr["product_views"]).toFixed(2) *
         100
     );
