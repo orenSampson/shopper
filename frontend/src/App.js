@@ -1,7 +1,9 @@
+import Chart from "./components/Chart/Chart";
+
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Chart />
     </div>
   );
 }
