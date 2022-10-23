@@ -1,10 +1,17 @@
 const express = require("express");
+const cors = require("cors");
 
 const { readCSVFile } = require("./utils/read-csv-file");
 const sequelize = require("./utils/database");
 const ShopData = require("./models/shop-data");
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 const getDataRoutes = require("./routes/shop-data");
 app.use("/api", getDataRoutes);
