@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-import { getChartData } from "../../api/shopperAPI";
+import { getData } from "../../api/shopperAPI";
+
+const DATA_TYPE = "chart";
 
 const Chart = () => {
   const [chartDataOptions, setChartDataOptions] = useState({});
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getChartData();
+      const data = await getData(DATA_TYPE);
 
       const xAxisData = [];
       const yAxisProductViews = [];
