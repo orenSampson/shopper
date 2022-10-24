@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Container from "@mui/material/Container";
 
 import RadioButtons from "./components/RadioButtons/RadioButtons";
 import ShopperChart from "./components/ShopperChart/ShopperChart";
@@ -22,10 +23,10 @@ function App() {
   }
 
   return (
-    <div>
+    <Container>
       <RadioButtons changeDisplay={changeDisplay} />
       {DataDisplay}
-    </div>
+    </Container>
   );
 }
 
