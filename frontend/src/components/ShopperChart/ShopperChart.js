@@ -6,7 +6,7 @@ import { getData } from "../../api/shopperAPI";
 
 const DATA_TYPE = "chart";
 
-const Chart = () => {
+const ShopperChart = () => {
   const [chartDataOptions, setChartDataOptions] = useState({});
 
   useEffect(() => {
@@ -60,4 +60,4 @@ const Chart = () => {
   return <HighchartsReact highcharts={Highcharts} options={chartDataOptions} />;
 };
 
-export default Chart;
+export default ShopperChart;

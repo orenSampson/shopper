@@ -34,7 +34,7 @@ function createData(
   };
 }
 
-export default function BasicTable() {
+const ShopperTable = () => {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
@@ -97,4 +97,6 @@ export default function BasicTable() {
       </Table>
     </TableContainer>
   );
-}
+};
+
+export default ShopperTable;
